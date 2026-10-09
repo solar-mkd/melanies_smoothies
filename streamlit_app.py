@@ -8,7 +8,7 @@ from snowflake.snowpark.functions import col
 
 
 # Write directly to the app
-st.title(f":cup_with_straw: Customize Your Smoothie :apple: :cup_with_straw: {st.__version__}")
+st.title(f":cup_with_straw: Customize Your Smoothie :cup_with_straw: {st.__version__}")
 st.write(
   """Choose fruits you want in your custom smoothie! """
 )
@@ -53,4 +53,4 @@ if ingredients_list:
 
 # smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-# st.text(smoothiefroot_response)
+st.text(smoothiefroot_response)
