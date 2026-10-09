@@ -27,8 +27,8 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 # Convert the Snowspark Dataframe to pandas dataframe so we can use LOC function
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
-st.stop
+# st.dataframe(pd_df)
+# st.stop
 
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:'
@@ -37,9 +37,6 @@ ingredients_list = st.multiselect(
 )
 
 if ingredients_list:
-    #st.write(ingredients_list)
-    #st.text(ingredients_list)
-
     ingredients_string = ''
     for fruit_choosen in ingredients_list:
         ingredients_string += fruit_choosen + ' '
