@@ -16,7 +16,7 @@ st.write('The name on your will be', name_on_order)
 
 # session = get_active_session()
 cnx = st.connection("snowflake")
-sessin = cnx.session()
+session = cnx.session()
 
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
